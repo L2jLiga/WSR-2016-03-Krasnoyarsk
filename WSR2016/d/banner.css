@@ -1,0 +1,161 @@
+#banner {
+	box-sizing: border-box;
+	position:relative;
+	height: 280px;
+	width: 336px;
+	background-color: RGBA(0,97,170,0.2);
+	background-image: url('res/logo.png'), url('res/eco2.jpg');
+	background-position: 5px 5px, 5px 150px;
+	background-position-x: 5px, 5px;
+    background-position-y: 5px, 150px;
+	background-repeat:no-repeat;
+	background-size: 100px, 75px;
+	padding:0;
+	box-shadow: inset 0 0 5px 3px RGBA(127,127,127,0.7);
+}
+
+#banner > div {
+	position:relative;
+	height: 280px;
+	width: 336px;
+	background-color: RGBA(255,255,255,0.3);
+}
+#banner > div:not(#scene1) {
+	display: none;
+}
+#banner > div > * {
+	position:absolute;
+}
+
+#scene1 > div {
+	color: RGBA(0,97,170,0.7);
+	top: 50px;
+	left: 35px;
+	font-size: 26px;
+	font-weight:bold;
+	font-style: italic;
+}
+
+#scene1 > #clickme {
+	position: absolute;
+	margin: auto;
+	left: -15px;
+	right:0;top:0;bottom:0;
+}
+
+#scene1 > #freezer:hover {
+	box-shadow: 0 0 5px 3px RGBA(255,0,0,0.7);
+}
+#scene1 > #freezer,
+#scene2 > #yam {
+	position:absolute;
+	bottom: 15px;
+	right: 15px;
+	width: 100px;
+}
+
+.elapsed {
+	color: red;
+	font-weight: bold;
+}
+.clicked {
+	right: 50px;
+	bottom: 30px;
+}
+
+#scene2 {
+	cursor: crosshair;
+}
+#timer {
+	right: 10px;
+	top:10px;
+}
+
+#timer > div {
+	display: inline;
+}
+
+#retry {
+	right: 10px;
+    bottom: 160px;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    cursor: pointer;
+}
+#sales {
+	left:0;
+	right:0;
+	margin:0 auto;
+	top: 10px;
+	width: 100px;
+}
+#cont {bottom: 15px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+        cursor: pointer;
+    }
+#percent {
+    margin: auto;
+    left: 60px;
+    right: 0;
+    top: -55px;
+    bottom: 0;
+    display: inline-block;
+    width: 200px;
+    height: 0px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    }
+    #percent::after {
+		content: '%';
+    }
+    #percent::before {
+		content: 'Ваша скидка: ';
+		font-size: 30px;
+    }
+
+
+
+#scene3 > div {
+	top: 22px;
+}
+#f1 {
+	left: 50px;
+}
+
+
+#scene3 > div img{
+	width: 80px;
+	margin-top: 30px;
+}
+#f2 {
+	left: 150px;
+}
+
+#scene3 > div > p{
+	position: absolute;
+	    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+#f3 {
+	left: 250px;
+}
+
+#price {
+	    background: url('res/for_price.jpg');
+    background-size: 53px;
+    background-repeat: no-repeat;
+    height: 30px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    margin-top: -5px;
+	margin-left: 28px;
+}

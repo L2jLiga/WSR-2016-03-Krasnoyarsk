@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1440px;
+	color: rgb(125,37,0);
+}
+a {
+	text-decoration: none;
+}
+body > div {
+	position: fixed;
+	display:block;
+	height:100%;
+	width:100%;
+	max-width: 1440px;
+	z-index: -1;
+	background: RGBA(0,0,15, 0.2);
+	margin: 0 auto;
+}
+
+
+
+header {
+	color: white;
+	box-sizing: border-box;
+	background: linear-gradient(to bottom, RGBa(63,63,127, 0.45) 0%, rgba(63,63,200,0.45) 100%);
+}
+header a {
+	color: white;
+}
+header > img {
+	margin: 20px 0 0 20px;
+	width: 250px;
+}
+
+header > aside {
+	margin: 20px 20px 0 0;
+	float:right;
+}
+
+header > aside > div {
+	padding: 5px;
+}
+
+header > aside > div:first-child {
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ font-weight:bold;
+}
+
+header > aside > div:nth-child(2)::after {
+	content: ' шт.';
+}
+
+header > aside > div:nth-child(3)::after {
+	content: ' руб.';
+}
+
+
+header > nav {
+	clear:both;
+	width: 100%;
+	background: linear-gradient(to bottom, RGBA(0,0,0,0.05) 0%, RGBA(0,0,0,0.15) 75%, RGBA(0,0,0,0.15) 100%);
+}
+header > nav > a {
+	display: inline-block;
+	padding: 10px 10px;
+	text-transform: uppercase;
+	width: 100px;
+	text-align:center;
+	position: relative;
+}
+
+header > nav > a.active {
+	background: linear-gradient(to bottom, RGBA(0,0,0,0.15) 0%, RGBA(0,0,0,0.25) 75%, RGBA(0,0,0,0.15) 100%);
+}
+
+header > nav > a:not(.active)::before,
+header > nav > a:not(.active)::after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 75%;
+	background: white;
+	background: rgb(125,37,0);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: 0.3s transform, 0.35s opacity;
+}
+header > nav > a:not(.active):hover::before {
+	top: 0;
+	opacity: 1;
+	transform: translateY(5px);
+}
+header > nav > a:not(.active):hover::after {
+	bottom: 0;
+	opacity: 1;
+	transform: translateY(-5px);
+}
+
+body > nav,
+body > section,
+body > content,
+body > aside {
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px;
+}
+
+body > nav,
+body > section {
+	margin-left: 10px;
+	width: 24%;
+}
+
+body > content,
+body > aside {
+	width: 72%;
+	margin-left: 10px;
+}
+
+body > nav,
+body > aside {
+	height: 135px;
+	color: rgb(80,22,0);
+}
+body > content,
+body > section {
+	box-sizing: border-box;
+}
+
+body > content > h1,
+body > section > h1 {
+	font-size: 24px;
+	margin: 10px;
+}
+
+body > nav > a:not(:first-child) {
+	margin-top: 10px;
+}
+body > nav > a {
+	display:block;
+	padding: 10px;
+	box-sizing: border-box;
+	width:100%;
+	background: RGBA(63,63,200,0.15);
+	color: rgb(127,0,255);
+	color: rgb(125,37,0);
+	letter-spacing: 3px;
+	padding-left: 30px;
+}
+
+body > nav > a:hover {
+	background-image: linear-gradient(to bottom, RGBA(0,0,0,0.05) 0%, RGBA(0,0,0,0.15) 75%, RGBA(0,0,0,0.15) 100%);
+}
+
+body > aside {
+	text-align: center;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	box-shadow: inset 0 0 5px 15px RGB(127,127,127);
+	font-weight: bold;
+	font-size: 22px;
+	padding-top: 60px;
+	background: RGB(200,200,200);
+}
+
+article {
+	position: relative;
+	background: RGBA(63,63,200,0.15);
+	padding: 10px;
+	text-align: center;
+	transition: 0.3s box-shadow;
+}
+
+article:hover {
+	box-shadow: inset 0 0 3px 3px RGB(127,127,127);
+}
+
+article > img {
+	position: absolute;
+	right: 10%;
+	top: 15%;
+	width: 15%;
+}
+section > article:not(:first-child) {
+	margin-top: 10px;
+}
+
+content > article {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+content > article:nth-child(3n) {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+content > article:nth-child(n+5) {
+	margin-top: 10px;
+}
+
+article > h1 {
+	font-size: 20px;
+	margin: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+article > h1::before {
+	content: 'Бирюса ';
+}
+article > a > img {
+	width: 95%;
+}
+article > p {
+	display: inline-block;
+	margin: 5px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    float:left;
+	color: rgb(170,50,0);
+}
+article > p:last-child {
+	float:right;
+}
+article > p:not(:last-child)::after {
+	content: ' руб.';
+}
+article > p:last-child::after {
+	content: ' шт.';
+}
+article::after {
+	content: '';
+	display: table;
+	clear:both;
+}
+footer {
+	text-transform: uppercase;
+	padding: 15px;
+	margin-top:10px;
+	box-sizing: border-box;
+	background: linear-gradient(to top, RGBa(63,63,127, 0.45) 0%, rgba(63,63,200,0.45) 100%),
+				linear-gradient(to bottom, RGBA(0,0,0,0.05) 0%, RGBA(0,0,0,0.15) 75%, RGBA(0,0,0,0.15) 100%);
+}
+footer a {
+	color: white;
+}
+footer > nav {
+	float: left;
+	width: 60%;
+}
+	footer > nav > div:last-child {
+		display: none;
+	}
+footer > nav> div:not(:first-child) {
+	margin-left: 5px;
+}
+footer > nav > div:not(:nth-child(n+4))::after {
+	margin-left: 5px;
+	content: '|';
+}
+footer > form {
+	float:right;
+	width: 40%;
+}
+footer > form > * {
+	background: white;
+	border-radius: 20px;
+	padding: 2px 5px;
+}
+footer > form > input {
+	width: 30%;
+}
+footer > * > * {
+	display: inline-block;
+}
+
+
+footer::after {
+	content: '';
+	display:table;
+	clear: both;
+}
+
+/* Просмотр отдельного товара */
+content > img {
+	float: left;
+	height: 250px;
+	margin-right: 20px;
+}
+
+content > aside::before {
+	content: '';
+	clear:both;
+	display: table;
+}
+
+content > h1:nth-child(2), content > p:nth-child(3) {
+	font-size: 28px;
+	letter-spacing: 1.1px;
+	margin: 0;
+}
+
+content > h1:nth-child(2) {
+	letter-spacing: 1.25px;
+}
+
+content > p:nth-child(4) {
+	font-size: 20px;
+	letter-spacing: 1.1px;
+	max-width: 600px;
+	text-indent: 1.25em;
+}
+/*content > div > p {
+	margin: 0;
+	line-height: 1.5;
+}
+
+content > div > p > span:first-child {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+content > div > p > span:last-child {
+	font-weight: bold;
+	padding-left: 50px;
+}*/
+
+content > div {
+	display: table;
+	max-width: 450px;
+}
+content > div > div {
+	display: table-row;
+}
+content > div > div:first-child {
+	line-height: 2;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+content > div > div > div {
+	display: table-cell;
+	padding: 5px;
+}
+content > div > div > div:last-child {
+	padding-left: 30px;
+}
+content > div > div > div > span {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+content > aside > form {
+	width: 45%;
+	box-sizing: border-box;
+	float: right;
+}
+
+
+content > aside > form > input,
+content > aside > form > textarea {
+	width: 90%;
+	box-sizing:border-box;
+	margin: 10px;
+	padding: 10px;
+	letter-spacing: 1.5px;
+}
+
+content > aside > h1 {
+	display: inline-block;
+}
+content > aside > div {
+	width: 40%;
+	padding: 1.5%;
+	background: RGBA(0,0,0,0.15);
+}
+content > aside > div:not(:first-child) {
+	margin-top: 5px;
+}
+content > aside > div > h1 {
+	font-weight: normal;
+	font-size: 1.25em;
+}
+content > aside > div > time {
+	float: right;
+}
+
+/*Заголовки*/
+h1 {
+	color: rgb(80,22,0);
+}
